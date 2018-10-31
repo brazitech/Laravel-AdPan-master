@@ -1,6 +1,6 @@
 # Easy AdminLTE integration with Laravel 5
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/brazitech/adpan.svg?style=flat-square)](https://packagist.org/packages/brazitech/AdPan)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/brazitech/laravel-adpan.svg?style=flat-square)](https://packagist.org/packages/brazitech/AdPan)
 [![Build Status](https://travis-ci.org/brazitech/adpan.svg?branch=master)](https://travis-ci.org/brazitech/adpan)
 [![Quality Score](https://img.shields.io/scrutinizer/g/brazitech/adpan.svg?style=flat-square)](https://scrutinizer-ci.com/g/brazitech/adpan)
 [![StyleCI](https://styleci.io/repos/38200433/shield?branch=master)](https://styleci.io/repos/38200433)
