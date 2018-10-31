@@ -1,17 +1,17 @@
 {
   "name": "brazitech/Laravel-AdPan",
-  "description": "Easy AdminLTE integration with Laravel",
+  "description": "Easy AdminLTE integration with Laravel 5.7",
   "keywords": ["laravel", "adminlte", "admin", "administrator"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Jeroen Noten",
-      "email": "jeroennoten@me.com"
+      "name": "Robert Skolnick",
+      "email": "proj@nvsdi.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "JeroenNoten\\LaravelAdminLte\\": "src/"
+      "Brazitech\\LaravelAdPan\\": "src/"
     }
   },
   "autoload-dev": {
@@ -22,7 +22,7 @@
   "extra": {
       "laravel": {
           "providers": [
-              "JeroenNoten\\LaravelAdminLte\\ServiceProvider"
+              "Brazitech\\LaravelAdPan\\ServiceProvider"
           ]
       }
   },
@@ -31,6 +31,6 @@
     "php": ">=5.5.9"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.0"
+    "phpunit/phpunit": ">=4.0"
   }
 }
