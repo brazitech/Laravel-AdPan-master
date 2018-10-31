@@ -28,7 +28,7 @@ This package provides an easy way to quickly set up [AdminLTE](https://almsaeeds
 1. Require the package using composer:
 
     ```
-    composer require brazitech/AdPan
+    composer require brazitech/Laravel-AdPan
     ```
 
 2. Add the service provider to the `providers` in `config/app.php`:
