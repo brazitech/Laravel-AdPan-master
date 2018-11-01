@@ -1,10 +1,10 @@
 # Easy AdminLTE integration with Laravel 5
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/brazitech/AdPan.svg?style=flat-square)](https://packagist.org/packages/brazitech/AdPan)
-[![Build Status](https://travis-ci.org/brazitech/AdPan.svg?branch=master)](https://travis-ci.org/brazitech/AdPan)
-[![Quality Score](https://img.shields.io/scrutinizer/g/brazitech/AdPan.svg?style=flat-square)](https://scrutinizer-ci.com/g/brazitech/AdPan)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/brazitech/laraveladpan.svg?style=flat-square)](https://packagist.org/packages/brazitech/laraveladpan)
+[![Build Status](https://travis-ci.org/brazitech/laraveladpan.svg?branch=master)](https://travis-ci.org/brazitech/laraveladpan)
+[![Quality Score](https://img.shields.io/scrutinizer/g/brazitech/laraveladpan.svg?style=flat-square)](https://scrutinizer-ci.com/g/brazitech/laraveladpan)
 [![StyleCI](https://styleci.io/repos/38200433/shield?branch=master)](https://styleci.io/repos/38200433)
-[![Total Downloads](https://img.shields.io/packagist/dt/brazitech/AdPan.svg?style=flat-square)](https://packagist.org/packages/brazitech/AdPan)
+[![Total Downloads](https://img.shields.io/packagist/dt/brazitech/laraveladpan.svg?style=flat-square)](https://packagist.org/packages/brazitech/laraveladpan)
 
 This package provides an easy way to quickly set up [AdminLTE](https://almsaeedstudio.com) with Laravel 5. It has no requirements and dependencies besides Laravel, so you can start building your admin panel immediately. The package just provides a Blade template that you can extend and advanced menu configuration possibilities. A replacement for the `make:auth` Artisan command that uses AdminLTE styled views instead of the default Laravel ones is also included.
 
@@ -28,7 +28,7 @@ This package provides an easy way to quickly set up [AdminLTE](https://almsaeeds
 1. Require the package using composer:
 
     ```
-    composer require brazitech/AdPan
+    composer require brazitech/laraveladpan
     ```
 
 2. Add the service provider to the `providers` in `config/app.php`:
@@ -36,13 +36,13 @@ This package provides an easy way to quickly set up [AdminLTE](https://almsaeeds
     > Laravel 5.5 uses Package Auto-Discovery, so dos not require you to manually add the ServiceProvider
 
     ```php
-    brazitech\LaravelAdminLte\ServiceProvider::class,
+       brazitech/laraveladpan\ServiceProvider::class,
     ```
 
 3. Publish the public assets:
 
     ```
-    php artisan vendor:publish --provider="Brazitech\LaravelAdminLte\ServiceProvider" --tag=assets
+    php artisan vendor:publish --provider="brazitech/laraveladpan\ServiceProvider" --tag=assets
     ```
 
 ## 2. Updating
@@ -50,13 +50,13 @@ This package provides an easy way to quickly set up [AdminLTE](https://almsaeeds
 1. To update this package, first update the composer package:
 
     ```
-    composer update brazitech/AdPan
+    composer update brazitech/laraveladpan
     ```
 
 2. Then, publish the public assets with the `--force` flag to overwrite existing files
 
     ```
-    php artisan vendor:publish --provider="Brazitech\LaravelAdminLte\ServiceProvider" --tag=assets --force
+    php artisan vendor:publish --provider="Brazitech\LaravelAdPan\ServiceProvider" --tag=assets --force
     ```
 
 ## 3. Usage
@@ -149,7 +149,7 @@ If you don't want a registration form, set the `register_url` setting to `null` 
 First, publish the configuration file:
 
 ```
-php artisan vendor:publish --provider="Brazitech\LaravelAdminLte\ServiceProvider" --tag=config
+php artisan vendor:publish --provider="Brazitech\LaravelAdPan\ServiceProvider" --tag=config
 ```
 
 Now, edit `config/adminlte.php` to configure the title, skin, menu, URLs etc. All configuration options are explained in the comments. However, I want to shed some light on the `menu` configuration.
@@ -223,7 +223,7 @@ For example with Laratrust:
 namespace MyApp;
 
 use Brazitech\LaravelAdPan\Menu\Builder;
-use Brazitech\LaravelAdminLte\Menu\Filters\FilterInterface;
+use Brazitech\LaravelAdPan\Menu\Filters\FilterInterface;
 use Laratrust;
 
 class MyMenuFilter implements FilterInterface
@@ -243,11 +243,11 @@ And then add to `config/adminlte.php`:
 
 ```php
 'filters' => [
-    Brazitech\LaravelAdminLte\Menu\Filters\ActiveFilter::class,
-    Brazitech\LaravelAdminLte\Menu\Filters\HrefFilter::class,
-    Brazitech\LaravelAdminLte\Menu\Filters\SubmenuFilter::class,
-    Brazitech\LaravelAdminLte\Menu\Filters\ClassesFilter::class,
-    //Brazitech\LaravelAdminLte\Menu\Filters\GateFilter::class, Comment this line out
+    Brazitech\LaravelAdPan\Menu\Filters\ActiveFilter::class,
+    Brazitech\LaravelAdPan\Menu\Filters\HrefFilter::class,
+    Brazitech\LaravelAdPan\Menu\Filters\SubmenuFilter::class,
+    Brazitech\LaravelAdPan\Menu\Filters\ClassesFilter::class,
+    //Brazitech\LaravelAdPan\Menu\Filters\GateFilter::class, Comment this line out
     MyApp\MyMenuFilter::class,
 ]
 ```
@@ -263,7 +263,7 @@ To configure the menu at runtime, register a handler or callback for the `MenuBu
 
 ```php
 use Illuminate\Contracts\Events\Dispatcher;
-use Brazitech\LaravelAdminLte\Events\BuildingMenu;
+use Brazitech\LaravelAdPan\Events\BuildingMenu;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -354,11 +354,11 @@ Also the [ChartJS](https://www.chartjs.org/) plugin is supported. If set to `tru
 ## 6. Translations
 
 At the moment, English, German, French, Dutch, Portuguese and Spanish translations are available out of the box.
-Just specifiy the language in `config/app.php`.
+Just specify the language in `config/app.php`.
 If you need to modify the texts or add other languages, you can publish the language files:
 
 ```
-php artisan vendor:publish --provider="Brazitech\LaravelAdminLte\ServiceProvider" --tag=translations
+php artisan vendor:publish --provider="Brazitech\LaravelAdPan\ServiceProvider" --tag=translations
 ```
 
 Now, you can edit translations or add languages in `resources/lang/vendor/adminlte`.
@@ -368,14 +368,14 @@ Now, you can edit translations or add languages in `resources/lang/vendor/adminl
 If you need full control over the provided views, you can publish them:
 
 ```
-php artisan vendor:publish --provider="Brazitech\LaravelAdminLte\ServiceProvider" --tag=views
+php artisan vendor:publish --provider="Brazitech\LaravelAdPan\ServiceProvider" --tag=views
 ```
 
 Now, you can edit the views in `resources/views/vendor/adminlte`.
 
 ## 8. Issues, Questions and Pull Requests
 
-You can report issues and ask questions in the [issues section](https://github.com/brazitech/AdPan/issues). Please start your issue with `ISSUE: ` and your question with `QUESTION: `
+You can report issues and ask questions in the [issues section](https://github.com/brazitech/laraveladpan/issues). Please start your issue with `ISSUE: ` and your question with `QUESTION: `
 
 If you have a question, check the closed issues first. Over time, I've been able to answer quite a few.
 

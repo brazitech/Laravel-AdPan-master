@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Laravel-AdPan-master.iml" filepath="$PROJECT_DIR$/.idea/Laravel-AdPan-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LaravelAdPan.iml" filepath="$PROJECT_DIR$/.idea/LaravelAdPan.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,6 @@
 <?php
 
-namespace JeroenNoten\LaravelAdminLte\Console;
+namespace Brazitech\LaravelAdminLte\Console;
 
 use Illuminate\Auth\Console\AuthMakeCommand;
 
