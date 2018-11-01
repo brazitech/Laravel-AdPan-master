@@ -7,7 +7,7 @@ use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Container\Container;
 use Brazitech\LaravelAdPan\Events\BuildingMenu;
-use Brazitech\LaravelAdPanConsole\AdminLteMakeCommand;
+use Brazitech\LaravelAdPan\Console\AdminLteMakeCommand;
 use Brazitech\LaravelAdPan\Console\MakeAdminLteCommand;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Brazitech\LaravelAdPan\Http\ViewComposers\AdminLteComposer;

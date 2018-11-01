@@ -1,6 +1,6 @@
 <?php
 
-namespace Brazitech\LaravelAdminLte\Console;
+namespace Brazitech\LaravelAdPan\Console;
 
 use Illuminate\Auth\Console\AuthMakeCommand;
 
