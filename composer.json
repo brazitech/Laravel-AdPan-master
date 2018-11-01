@@ -1,6 +1,6 @@
 {
   "name": "brazitech/Laravel-AdPan",
-  "description": "Easy AdminLTE integration with Laravel 5.7",
+  "description": "AdminLTE integration with Laravel 5.7",
   "keywords": ["laravel", "adminlte", "admin", "administrator"],
   "license": "MIT",
   "authors": [
@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Brazitech\\LaravelAdPan\\": "src/"
+      "Brazitech\\Laravel-AdPan\\": "src/"
     }
   },
   "autoload-dev": {
@@ -22,7 +22,7 @@
   "extra": {
       "laravel": {
           "providers": [
-              "Brazitech\\LaravelAdPan\\ServiceProvider"
+              "Brazitech\\Laravel-AdPan\\ServiceProvider"
           ]
       }
   },
